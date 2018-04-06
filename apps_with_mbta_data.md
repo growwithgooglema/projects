@@ -20,7 +20,7 @@
 
 I have written some code to get a decent list of universities in the metropolitan area of Boston. It's in `python`:
 
-```
+```python
 #!/usr/bin/env python3
 
 import re
@@ -56,7 +56,7 @@ This should generate a `JSON` file with the names of the universities and some a
 
 The following piece of code is to retrieve the geolocation information a given university name. It's in `JavaScript`. You won't be able to run it without creating a Google Maps API Key and adding said key to your machine as an environment variable. In any case, here it is:
 
-```
+```javascript
 // This is supposed to script to define a Place class/prototype
 
 let https = require('https');
