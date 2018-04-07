@@ -79,3 +79,19 @@ To initiate a collaborative project, please do the following:
     - [Markdown reference guide from @br3ndonland](https://github.com/br3ndonland/udacity-google/blob/master/markdown-guide.md)
 - Add your project ideas and their specifications to the Markdown file and save.
 
+### Commit and push
+
+- After saving files, changes need to be committed to the Git repository.
+  - GitHub Desktop provides a user interface to make this easy.
+  - Command line commits:
+
+    ```bash
+    git add --all
+    git commit -m "commit message"
+    ```
+
+- Best practices for commits:
+  - **Make meaningful, cohesive, focused commits.** Commit when an objective has been completed, or before a major change is made. Break changes up into topics so the maintainer can easily accept or reject changes from a pull request.
+  - **Include a commit message.** See [How to make a Git commit message](https://chris.beams.io/posts/git-commit/).
+- After committing, push the changes to your fork on GitHub.
+
