@@ -1,3 +1,24 @@
+# MBTA project
+
+## APIs
+
+### MBTA
+
+- The Massachusetts Bay Transportation Authority (MBTA) provides a [developer portal online](https://www.mbta.com/developers).
+- They have a new [MBTA V3 API](https://api-v3.mbta.com/) that provides data in JSON API format.
+
+#### API key
+
+- The request key button doesn't seem to be working.
+- The API can be used without a key for limited purposes, so it should be okay. The [developer portal](https://www.mbta.com/developers/v3-api) says:
+  > You can try it out without a key, but we strongly recommend using a key early in the development process.
+
+### Google
+
+[TODO]
+
+## Application
+
 ### Build application using both Google Geocoding and MBTA API's
 
 1. Rank schools based on the density of MBTA Bus stops
@@ -9,7 +30,6 @@
     - Use the number from previous step as a grade for the given university
     - Iterate previous steps for every university
 
-
 2. Are MBTA stops near hospitals/clinic/healthcare centers equipped with wheelchair boarding?
     - Generate a list of hospitals in the Boston/Cambridge/Somerville areas
     - Obtain geolocation information of these hospitals
@@ -17,8 +37,7 @@
     - Write an algorithm to get the distance between 2 geolocation points
     - Rank hospitals by their "level of access" of MBTA stops with wheelchair boarding
 
-
-I have written some code to get a decent list of universities in the metropolitan area of Boston. It's in `python`:
+I have written some code to get a decent list of universities in the metropolitan area of Boston. It's in `python` and located in [get_university_list.py](get_university_list.py):
 
 ```python
 #!/usr/bin/env python3
@@ -79,11 +98,11 @@ class Place {
 	getLat() {
 		return this.lat;
     }
-    
+
 	getLong() {
 		return this.long;
     }
-    
+
 	getPlaceID() {
 		return this.placeID;
     }
@@ -91,19 +110,19 @@ class Place {
     setStreet(val) {
 		this.street = val;
     }
-    
+
 	setLat(val) {
 		this.lat = val;
     }
-    
+
 	setLong(val) {
 		this.long = val;
     }
-    
+
 	setPlaceID(val) {
 		this.placeID = val;
     }
-    
+
 	populateAttributes() {
 		const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${this.name.replace(' ', '+')}&key=${token}`;
 		https.get(url, response => {
@@ -124,12 +143,12 @@ class Place {
 		});
 		// console.log(this);
     }
-    
+
 	// Get the MBTA bus stops within a 1 mile radius
 	getStops() {
 		// Point this call to an API with lat=this.lat&long=this.long&radius=1
     }
-    
+
 	toString() {
 		return `Name: ${this.name}\nStreet Address: ${this.street}\nLatitute: ${this.lat} N\nLongitude: ${this.long} W.`;
 	}
@@ -150,3 +169,13 @@ console.log(mit);
 ```
 
 We can discuss all these things tomorrow.
+
+---
+
+### Additional ideas
+
+#### @br3ndonland
+
+- We could use one of the [JavaScript client libraries](http://jsonapi.org/implementations/#client-libraries-javascript) that reads JSON API data.
+- It would be cool to **display a map with real-time locations** of the buses.
+- We could also **color the roads** like Google Maps does to show traffic, but just for MBTA vehicles.
