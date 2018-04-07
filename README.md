@@ -46,3 +46,27 @@ To initiate a collaborative project, please do the following:
   - [GitHub & Collaboration](https://www.udacity.com/course/github-collaboration--ud456) Udacity course
   - [Quick reference guide to Git and GitHub from @br3ndonland](https://github.com/br3ndonland/general/blob/master/guide-git.md)
 
+### Fork, clone, and branch
+
+- Fork the repository on GitHub. Forking creates a copy for your GitHub account.
+- Clone the repository from the GitHub fork to your computer.
+  - [GitHub Desktop can be used to clone](https://help.github.com/desktop/guides/getting-started-with-github-desktop/).
+  - If cloning from the command line:
+
+    ```bash
+    cd <PATH-WHERE-YOU-WANT-THE-REPO>
+    git clone git@github.com:growwithgooglema/projects.git
+    ```
+
+- Create a branch for your project.
+  - Use a clear name for your branch. When submitting a pull request, the pull request name is auto-populated from the branch name.
+  - Again, GitHub Desktop can be used for this.
+  - Command line option:
+
+    ```bash
+    git checkout -b myspecialproject
+    ```
+
+  - The `checkout` command creates a branch and switches to the new branch.
+  - The project can be further branched, for example onto a `dev` branch. The `dev` branch should be merged into the main project branch before pushing to GitHub.
+
