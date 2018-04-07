@@ -70,3 +70,12 @@ To initiate a collaborative project, please do the following:
   - The `checkout` command creates a branch and switches to the new branch.
   - The project can be further branched, for example onto a `dev` branch. The `dev` branch should be merged into the main project branch before pushing to GitHub.
 
+### Suggest a project
+
+- Create a markdown file and save with extension ".md".
+  - Check out these resources if you are unfamiliar with Markdown:
+    - [MarkdownGuide](https://www.markdownguide.org/)
+    - [GitHub-Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+    - [Markdown reference guide from @br3ndonland](https://github.com/br3ndonland/udacity-google/blob/master/markdown-guide.md)
+- Add your project ideas and their specifications to the Markdown file and save.
+
