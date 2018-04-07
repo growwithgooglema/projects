@@ -25,6 +25,7 @@ Collaborative projects
   - [Markdown](#markdown)
   - [Python](#python)
   - [JavaScript](#javascript)
+  - [Other languages](#other-languages)
 - [Text editor setup](#text-editor-setup)
   - [vscode](#vscode)
 
@@ -54,7 +55,6 @@ To initiate a collaborative project, please do the following:
 
 ### Fork, clone, and branch
 
-- Fork the repository on GitHub. Forking creates a copy for your GitHub account.
 - Clone the repository from the GitHub fork to your computer.
   - [GitHub Desktop can be used to clone](https://help.github.com/desktop/guides/getting-started-with-github-desktop/).
   - If cloning from the command line:
@@ -64,8 +64,10 @@ To initiate a collaborative project, please do the following:
     git clone git@github.com:growwithgooglema/projects.git
     ```
 
-- Create a branch for your project.
+- If you are not a repository owner, you will not be able to push to the original repository. Fork the repository on GitHub instead of directly cloning. Forking creates a copy for your GitHub account.
+- Create a branch to isolate changes from the `master` branch.
   - Use a clear name for your branch. When submitting a pull request, the pull request name is auto-populated from the branch name.
+  - The branch name `dev` is commonly used.
   - Again, GitHub Desktop can be used for this.
   - Command line option:
 
@@ -74,7 +76,7 @@ To initiate a collaborative project, please do the following:
     ```
 
   - The `checkout` command creates a branch and switches to the new branch.
-  - The project can be further branched, for example onto a `dev` branch. The `dev` branch should be merged into the main project branch before pushing to GitHub.
+  - The project can be further branched, for example onto a feature branch.
 
 ### Suggest a project
 
@@ -104,6 +106,7 @@ To initiate a collaborative project, please do the following:
 
 ### Submit pull request
 
+- If you are not a repository owner, you will need to submit a pull request from a fork to merge changes.
 - A pull request asks the owner of the master repository to merge changes from the requester's fork to the master repository. See [About pull requests on GitHub](https://help.github.com/articles/about-pull-requests/).
 - Click "New pull request" on the master repository's GitHub page.
 - Click "Compare across forks." The base fork is the location in the master repository where the changes will go. The head fork is your fork where the changes are located.
@@ -123,40 +126,47 @@ To initiate a collaborative project, please do the following:
 
 - Please follow the suggestions for standardized Markdown formatting provided by [markdownlint](https://github.com/DavidAnson/markdownlint) and [Markdown Style Guide](http://www.cirosantilli.com/markdown-style-guide/).
 - Further suggestions:
-  - Dashes for unordered lists
+  - Two space indentations.
+  - Dashes for unordered lists.
   - The first line of the file should be the title as H1, like `# Title`.
   - Include `## Table of Contents`, and use Markdown All in One in vscode to insert the ToC.
 
 ### Python
 
-- Please format Python code for Python 3 and [PEP 8](https://www.python.org/dev/peps/pep-0008/).
+- Please format Python code for Python 3 and [PEP 8](http://pep8.org/).
 - We amend PEP 8 to permit a line length of 100 characters.
 
 ### JavaScript
 
-[JavaScript Semistandard Style](https://github.com/Flet/semistandard) (based on [JavaScript Standard Style](https://standardjs.com/), but retaining semicolons)
+- [JavaScript Semistandard Style](https://github.com/Flet/semistandard)
+  - Based on [JavaScript Standard Style](https://standardjs.com/), but retaining semicolons.
+  - Two space indentations.
+
+### Other languages
+
+- Two space indentations.
 
 ## Text editor setup
 
 ### vscode
 
-Packages:
+#### Packages
 
 - [JavaScript Standard Style](https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs)
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 - [Python](https://code.visualstudio.com/docs/languages/python)
 
-Folder settings:
+#### Folder settings
 
 ```json
 {
-  // JavaScript
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "eslint.enable": false,
   "standard.enable": true,
   "standard.autoFixOnSave": true,
   "standard.semistandard": true,
-  // Python
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Args": [
     "--max-line-length",
