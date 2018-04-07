@@ -95,3 +95,13 @@ To initiate a collaborative project, please do the following:
   - **Include a commit message.** See [How to make a Git commit message](https://chris.beams.io/posts/git-commit/).
 - After committing, push the changes to your fork on GitHub.
 
+### Submit pull request
+
+- A pull request asks the owner of the master repository to merge changes from the requester's fork to the master repository. See [About pull requests on GitHub](https://help.github.com/articles/about-pull-requests/).
+- Click "New pull request" on the master repository's GitHub page.
+- Click "Compare across forks." The base fork is the location in the master repository where the changes will go. The head fork is your fork where the changes are located.
+- Best practices for pull requests:
+  - **Create pull requests from topic branches.** Creating a branch for your project, and submitting the pull request from that branch, helps keep the master repository organized.
+  - **Provide a descriptive pull request message.**
+    - List changes with bullet points.
+    - Reference other pull requests that may be superseded by this request.
