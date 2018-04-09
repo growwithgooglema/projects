@@ -21,6 +21,7 @@ Collaborative projects
   - [Suggest a project](#suggest-a-project)
   - [Commit and push](#commit-and-push)
   - [Submit pull request](#submit-pull-request)
+  - [GitHub collaboration features](#github-collaboration-features)
 - [Code style](#code-style)
   - [Markdown](#markdown)
   - [Python](#python)
@@ -117,6 +118,12 @@ To initiate a collaborative project, please do the following:
 - **Provide a descriptive pull request message.**
   - List changes with bullet points.
   - Reference other pull requests that may be superseded by this request.
+
+### GitHub collaboration features
+
+- **Teams**: We use [teams](https://help.github.com/articles/about-teams/)  for specific  initiatives within the organization. For example, the [gwg-mbta team](https://github.com/orgs/growwithgooglema/teams/gwg-mbta) is part of the *growwithgooglema organization*. We can add the organization's repos to it, such as the *gwg-mbta repo*. The team provides more features, like **chat within GitHub.**
+- **Issues**: We use [issues](https://help.github.com/articles/about-issues/) to divide up work and plan out new features. Issues can be tagged to help us organize them.
+- **Projects**: [Projects](https://help.github.com/articles/about-project-boards/) help us organize the issues by topic and status. An issue can be part of multiple projects.
 
 ---
 
