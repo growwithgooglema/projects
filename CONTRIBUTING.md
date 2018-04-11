@@ -16,10 +16,11 @@ Collaborative projects
 
 - [Table of Contents](#table-of-contents)
 - [Instructions](#instructions)
+  - [Suggest a project](#suggest-a-project)
   - [Get started with Git and GitHub](#get-started-with-git-and-github)
   - [Fork, clone, and branch](#fork-clone-and-branch)
-  - [Suggest a project](#suggest-a-project)
-  - [Commit and push](#commit-and-push)
+  - [Commit](#commit)
+  - [Push](#push)
   - [Submit pull request](#submit-pull-request)
   - [GitHub collaboration features](#github-collaboration-features)
 - [Code style](#code-style)
@@ -33,6 +34,15 @@ Collaborative projects
 ## Instructions
 
 To initiate a collaborative project, please do the following:
+
+### Suggest a project
+
+- Create a markdown file and save with extension ".md".
+  - Check out these resources if you are unfamiliar with Markdown:
+    - [MarkdownGuide](https://www.markdownguide.org/)
+    - [GitHub-Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+    - [Markdown reference guide from @br3ndonland](https://github.com/br3ndonland/udacity-google/blob/master/markdown-guide.md)
+- Add your project ideas and their specifications to the Markdown file and save.
 
 ### Get started with Git and GitHub
 
@@ -56,6 +66,7 @@ To initiate a collaborative project, please do the following:
 
 ### Fork, clone, and branch
 
+- Fork vs. clone: A **clone** is a copy of a repository on your computer. A **[fork](https://help.github.com/articles/fork-a-repo/)** duplicates the project into the user's GitHub account, and still maintains connection to the original master. Forks can also be cloned. **If you are not a repository owner, you will not be able to push to the original repository.** Fork the repository on GitHub instead of directly cloning. Changes to forks can be merged into the `upstream master` with pull requests.
 - Clone the repository from the GitHub fork to your computer.
   - [GitHub Desktop can be used to clone](https://help.github.com/desktop/guides/getting-started-with-github-desktop/).
   - If cloning from the command line:
@@ -65,7 +76,6 @@ To initiate a collaborative project, please do the following:
     git clone git@github.com:growwithgooglema/projects.git
     ```
 
-- If you are not a repository owner, you will not be able to push to the original repository. Fork the repository on GitHub instead of directly cloning. Forking creates a copy for your GitHub account.
 - Create a branch to isolate changes from the `master` branch.
   - Use a clear name for your branch. When submitting a pull request, the pull request name is auto-populated from the branch name.
   - The branch name `dev` is commonly used.
@@ -79,16 +89,7 @@ To initiate a collaborative project, please do the following:
   - The `checkout` command creates a branch and switches to the new branch.
   - The project can be further branched, for example onto a feature branch.
 
-### Suggest a project
-
-- Create a markdown file and save with extension ".md".
-  - Check out these resources if you are unfamiliar with Markdown:
-    - [MarkdownGuide](https://www.markdownguide.org/)
-    - [GitHub-Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
-    - [Markdown reference guide from @br3ndonland](https://github.com/br3ndonland/udacity-google/blob/master/markdown-guide.md)
-- Add your project ideas and their specifications to the Markdown file and save.
-
-### Commit and push
+### Commit
 
 - After saving files, changes need to be committed to the Git repository.
   - GitHub Desktop provides a user interface to make this easy.
@@ -98,23 +99,28 @@ To initiate a collaborative project, please do the following:
     git add --all
     git commit -m "commit message"
     ```
-- After committing, push the changes to your fork on GitHub.
 
 #### Best practices for commits
 
 - **Make meaningful, cohesive, focused commits.** Commit when an objective has been completed, or before a major change is made. Break changes up into topics so the maintainer can easily accept or reject changes from a pull request.
 - **Include a commit message, with an imperative title.** See [How to make a Git commit message](https://chris.beams.io/posts/git-commit/).
 
+### Push
+
+- **Please push to `dev` or another topic branch. Please do not push directly to `master`.** It is best to reserve the `master` branch for just one cohesive version of the app that always works.
+- Changes to forks can be merged into the `upstream master` with pull requests.
+
 ### Submit pull request
 
 - If you are not a repository owner, you will need to submit a pull request from a fork to merge changes.
-- A pull request asks the owner of the master repository to merge changes from the requester's fork to the master repository. See [About pull requests on GitHub](https://help.github.com/articles/about-pull-requests/).
+- A pull request asks the owner of the master repository to merge changes from the requester's branch or fork to the master repository. See [About pull requests on GitHub](https://help.github.com/articles/about-pull-requests/).
 - Click "New pull request" on the master repository's GitHub page.
-- Click "Compare across forks." The base fork is the location in the master repository where the changes will go. The head fork is your fork where the changes are located.
+- If you forked the repository, click "Compare across forks." The base fork is the location in the master repository where the changes will go. The head fork is your fork where the changes are located.
 
 #### Best practices for pull requests
 
-- **Create pull requests from topic branches.** Creating a branch for your project, and submitting the pull request from that branch, helps keep the master repository organized.
+- **Submit pull requests for review by other team members.** Even if you have access to the master, making a pull request for a merge from `dev` to `master`, and requesting review, helps keep team members accountable and helps prevent merge conflicts and breaking of functionality.
+- **Create pull requests from topic branches.** Creating branches like `dev` and feature or topic branches, and submitting pull requests from a branch, helps keep the master repository organized.
 - **Provide a descriptive pull request message.**
   - List changes with bullet points.
   - Reference other pull requests that may be superseded by this request.

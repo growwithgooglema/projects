@@ -25,8 +25,10 @@ If you would like to submit, or contribute to, a project, please see [CONTRIBUTI
 
 The [projects repository](https://github.com/growwithgooglema/projects) is a place where students can collaboratively brainstorm new projects. Please enclose project files in a sub-directory (folder).
 
-Once a project has been initiated, the project files will be moved to their own repository.
+Once a project has been initiated, the project files will be moved to their own repository, and assigned to a team.
 
-Project repositories:
+Projects:
 
-- [gwg-mbta](https://github.com/growwithgooglema/gwg-mbta)
+- gwg-mbta
+  - [gwg-mbta team](https://github.com/orgs/growwithgooglema/teams/gwg-mbta)
+  - [gwg-mbta repo](https://github.com/growwithgooglema/gwg-mbta)
